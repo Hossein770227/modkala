@@ -1,24 +1,25 @@
 {% extends "_base_accounts.html" %}
+{% load static %}
 {% load i18n %}
-
 {% block page_title %}
-    {% translate "welcome" %}
+  {% trans "welcome website" %}
 {% endblock page_title %}
-
 {% block content %}
-    <div class="mt-5 mb-4 text-lg text-center text-zinc-700">
-    به فروشگاه مدکالا خوش آمدید.
+      <div class="mt-5 mb-4 text-lg text-center text-zinc-700">
+        {% trans "Welcome to the Medkala store." %}
+      </div>
+      <div class="mt-6 mb-4 text-xs text-zinc-500">
+        {% trans "By completing your account information, you will help us greatly in providing you with suitable offers." %}
+      </div>
+      <div class="mt-10">
+        <a class="text-xs text-red-400 hover:text-red-500 transition flex items-center" href="">
+          {% trans "The main page of the store" %}
+          <svg class="fill-red-400" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+        </a>
+      </div>
+      <button class="mx-auto w-full px-2 py-3 mt-5 text-sm bg-red-500 hover:bg-red-400 transition text-gray-100 rounded-lg">
+        {% trans "Login to the user panel" %}
+      </button>
     </div>
-    <div class="mt-6 mb-4 text-xs text-zinc-500">
-    با تکمیل اطلاعات حساب کاربری کمک زیادی به ما برای پیشنهاد های مناسب به شما میکنید.
-    </div>
-    <div class="mt-10">
-    <a class="text-xs text-red-400 hover:text-red-500 transition flex items-center" href="">
-        صفحه اصلی فروشگاه
-        <svg class="fill-red-400" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
-    </a>
-    </div>
-    <button class="mx-auto w-full px-2 py-3 mt-5 text-sm bg-red-500 hover:bg-red-400 transition text-gray-100 rounded-lg">
-    ورود به پنل کاربری
-    </button>
 {% endblock content %}
+

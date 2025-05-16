@@ -114,11 +114,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'fa'
+# LANGUAGE_CODE = 'en-us'
 
+TIME_ZONE = 'Asia/Tehran'
+# TIME_ZONE = 'UTC'
 USE_I18N = True
+USE_L10N = True
 
 USE_TZ = True
 
@@ -143,3 +146,13 @@ AUTH_USER_MODEL = 'accounts.MyUser'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# translate
+LOCALE_PATHS = [
+os.path.join(BASE_DIR, 'templates/locale'),
+]
+
+LANGUAGES =(
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
