@@ -5,6 +5,8 @@ crispy-bootstrap4==2024.10
 Django==5.2.1
 django-crispy-forms==2.4
 idna==3.10
+jalali_core==1.0.0
+jdatetime==5.2.0
 psycopg2-binary==2.9.10
 pytz==2025.2
 requests==2.32.3
