@@ -81,12 +81,12 @@ class UserRegisterCodeView(View):
                 code_instance.delete() 
                 messages.success(request, _('You have successfully registered.'))
                 login(request, user)  
-                return redirect('products:product_list') 
+                return redirect('website:welcome') 
             else:
                 messages.error(request, _('This code is incorrect.'))
                 return redirect('accounts:verify_code')  
         
-        return redirect('products:product_list') 
+        return redirect('website:welcome') 
 
 
 def login_view(request):
@@ -100,7 +100,7 @@ def login_view(request):
             if next_url:
                 return redirect(next_url)
             else:
-                return redirect('products:product_list')
+                return redirect('website:welcome')
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})

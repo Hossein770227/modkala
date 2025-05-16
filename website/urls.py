@@ -5,5 +5,5 @@ from . import views
 app_name ='website'
 
 urlpatterns = [
-    path('welcome/', views.welcome_to_website, name='welcome'),
+    path('welcome/', views.WelcomeToWebsite.as_view(), name='welcome'),
 ]
