@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # local app
     'accounts',
     'website',
+    'mobile',
 
     # third party apps
     "crispy_forms",
