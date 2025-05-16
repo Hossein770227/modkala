@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 import pytz
 import random
 
@@ -19,10 +16,6 @@ from datetime import datetime, timedelta
 from .forms import UserRegisterForm, VerifyCodeForm
 from utils import send_otp_code
 from .models import OtpCode, MyUser
-
-
-
-
 
 
 class UserRegisterView(View):
@@ -50,9 +43,6 @@ class UserRegisterView(View):
             return redirect('accounts:verify_code')
         return render(request, 'accounts/user_register.html', {'form':form})
 
-
-
-    
 
 class UserRegisterCodeView(View):
     form_class = VerifyCodeForm
@@ -99,8 +89,6 @@ class UserRegisterCodeView(View):
         return redirect('products:product_list') 
 
 
-
-
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -118,15 +106,14 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form': form})
 
 
-
 def logout_view(request):
     if request.method =='POST':
         logout(request)
         messages.error(request, _('you successfully logout'))
         return redirect('products:product_list')
 
-# password change
 
+# password change
 @login_required
 def password_change_view(request):
     if request.method =='POST':
