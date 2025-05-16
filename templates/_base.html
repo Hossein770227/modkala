@@ -35,7 +35,7 @@
                 <img
                   alt=""
                   class="w-44 text-red-700"
-                  src="./assets/image/logo.png"
+                  src="{% static "assets/image/logo.png" %}"
                 />
               </a>
             </div>
@@ -84,7 +84,7 @@
                             class="flex items-center gap-x-2 rounded-xl border border-gray-100 px-4 py-2 text-zinc-500 hover:border-gray-200"
                           >
                             <img
-                              src="./assets/image/products/1.webp"
+                              src="{% static "assets/image/products/1.webp" %}"
                               alt=""
                               class="w-16"
                             />
@@ -99,7 +99,7 @@
                             class="flex items-center gap-x-2 rounded-xl border border-gray-100 px-4 py-2 text-zinc-500 hover:border-gray-200"
                           >
                             <img
-                              src="./assets/image/products/1.webp"
+                              src="{% static "assets/image/products/1.webp" %}"
                               alt=""
                               class="w-16"
                             />
@@ -176,7 +176,7 @@
                       <img
                         alt=""
                         class="h-6 w-full rounded-lg xs:h-10"
-                        src="./assets/image/logo.png"/>
+                        src="{% static "assets/image/logo.png" %}"/>
                     </a>
                   </div>
                 </div>
@@ -211,7 +211,7 @@
                                     class="flex items-center gap-x-2 rounded-xl border border-gray-100 px-4 py-2 text-zinc-500 hover:border-gray-200"
                                   >
                                     <img
-                                      src="./assets/image/products/1.webp"
+                                      src="{% static "assets/image/products/1.webp" %}"
                                       alt=""
                                       class="w-16"
                                     />
@@ -226,7 +226,7 @@
                                     class="flex items-center gap-x-2 rounded-xl border border-gray-100 px-4 py-2 text-zinc-500 hover:border-gray-200"
                                   >
                                     <img
-                                      src="./assets/image/products/1.webp"
+                                      src="{% static "assets/image/products/1.webp" %}"
                                       alt=""
                                       class="w-16"
                                     />
@@ -241,7 +241,7 @@
                                     class="flex items-center gap-x-2 rounded-xl border border-gray-100 px-4 py-2 text-zinc-500 hover:border-gray-200"
                                   >
                                     <img
-                                      src="./assets/image/products/1.webp"
+                                      src="{% static "assets/image/products/1.webp" %}"
                                       alt=""
                                       class="w-16"
                                     />
@@ -419,7 +419,7 @@
                                 alt=""
                                 class="h-[120px] w-[120px]"
                                 loading="lazy"
-                                src="./assets/image/products/1.webp"/>
+                                src="{% static "assets/image/products/1.webp" %}"/>
                             </a>
                           </div>
                           <div class="w-full space-y-1.5">
@@ -483,7 +483,7 @@
                                 alt=""
                                 class="h-[120px] w-[120px]"
                                 loading="lazy"
-                                src="./assets/image/products/1.webp"/>
+                                src="{% static "assets/image/products/1.webp" %}"/>
                             </a>
                           </div>
                           <div class="w-full space-y-1.5">
@@ -2068,7 +2068,7 @@
                 <img
                   alt=""
                   class="h-10 w-full rounded-lg"
-                  src="./assets/image/logo.png"/>
+                  src="{% static "assets/image/logo.png" %}"/>
               </a>
             </div>
             <!-- Close Button -->
@@ -2459,48 +2459,26 @@
     <div class="swiper heroSlider hidden md:block">
       <div class="swiper-wrapper">
         <a href="" class="swiper-slide">
-          <img src="./assets/image/heroSlider/1.jpg" alt="">
+          <img src="{% static "assets/image/heroSlider/1.jpg" %}" alt="">
         </a>
         <a href="" class="swiper-slide">
-          <img src="./assets/image/heroSlider/2.webp" alt="">
+          <img src="{% static "assets/image/heroSlider/2.webp" %}" alt="">
         </a>
         <a href="" class="swiper-slide">
-          <img src="./assets/image/heroSlider/3.webp" alt="">
+          <img src="{% static "assets/image/heroSlider/3.webp" %}" alt="">
         </a>
         <a href="" class="swiper-slide">
-          <img src="./assets/image/heroSlider/4.webp" alt="">
+          <img src="{% static "assets/image/heroSlider/4.webp" %}" alt="">
         </a>
         <a href="" class="swiper-slide">
-          <img src="./assets/image/heroSlider/5.webp" alt="">
+          <img src="{% static "assets/image/heroSlider/5.webp" %}" alt="">
         </a>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-    <!-- mobile -->
-    <div class="swiper heroSlider md:hidden">
-      <div class="swiper-wrapper">
-        <a href="" class="swiper-slide px-4">
-          <img class="rounded-lg" src="./assets/image/heroSlider/1m.png" alt="">
-        </a>
-        <a href="" class="swiper-slide px-4">
-          <img class="rounded-lg" src="./assets/image/heroSlider/2m.png" alt="">
-        </a>
-        <a href="" class="swiper-slide px-4">
-          <img class="rounded-lg" src="./assets/image/heroSlider/3m.png" alt="">
-        </a>
-        <a href="" class="swiper-slide px-4">
-          <img class="rounded-lg" src="./assets/image/heroSlider/4m.png" alt="">
-        </a>
-        <a href="" class="swiper-slide px-4">
-          <img class="rounded-lg" src="./assets/image/heroSlider/5m.png" alt="">
-        </a>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
+
   </div>
   {% block content %}
   {% endblock content %}
@@ -2510,7 +2488,7 @@
     <div class="flex flex-wrap gap-y-4 justify-between items-center px-6">
       <div class="flex flex-col">
         <div>
-          <img class="w-32 md:w-48" src="./assets/image/logo.png" alt="">
+          <img class="w-32 md:w-48" src="{% static "assets/image/logo.png" %}" alt="">
         </div>
         <div class="text-xs text-zinc-600 mt-3">
           تلفن پشتیبانی 44444444-021
@@ -2526,31 +2504,31 @@
     <!-- services -->
     <div class="flex flex-wrap items-center gap-y-5 justify-around mb-10">
         <div class="flex justify-center items-center flex-col rounded-3xl w-28 h-24">
-          <img class="w-12 md:w-14" src="./assets/image/services/cash-on-delivery.svg" alt="">
+          <img class="w-12 md:w-14" src="{% static "assets/image/services/cash-on-delivery.svg" %}" alt="">
           <span class="text-xs text-zinc-600">
           پرداخت درب منزل
           </span>
         </div>
         <div class="flex justify-center items-center flex-col rounded-3xl w-28 h-24">
-          <img class="w-12 md:w-14" src="./assets/image/services/days-return.svg" alt="">
+          <img class="w-12 md:w-14" src="{% static "assets/image/services/days-return.svg" %}" alt="">
           <span class="text-xs text-zinc-600">
           ضمانت 7 روزه
           </span>
         </div>
         <div class="flex justify-center items-center flex-col rounded-3xl w-28 h-24">
-          <img class="w-12 md:w-14" src="./assets/image/services/express-delivery.svg" alt="">
+          <img class="w-12 md:w-14" src="{% static "assets/image/services/express-delivery.svg" %}" alt="">
           <span class="text-xs text-zinc-600">
           پست پیشتاز
           </span>
         </div>
         <div class="flex justify-center items-center flex-col rounded-3xl w-28 h-24">
-          <img class="w-12 md:w-14" src="./assets/image/services/original-products.svg" alt="">
+          <img class="w-12 md:w-14" src="{% static "assets/image/services/original-products.svg" %}" alt="">
           <span class="text-xs text-zinc-600">
           ضمانت کالا
           </span>
         </div>
         <div class="flex justify-center items-center flex-col rounded-3xl w-28 h-24">
-          <img class="w-12 md:w-14" src="./assets/image/services/support.svg" alt="">
+          <img class="w-12 md:w-14" src="{% static "assets/image/services/support.svg" %}" alt="">
           <span class="text-xs text-zinc-600">
           پشتیبانی 24 ساعته
           </span>
@@ -2705,13 +2683,13 @@
         </div>
         <div class="lg:w-3/12 flex justify-center">
           <a href="#">
-            <img class="w-28 h-auto" src="./assets/image/services/symbol-01.png">
+            <img class="w-28 h-auto" src="{% static "assets/image/services/symbol-01.png" %}">
           </a>
           <a href="#">
-            <img class="w-28 h-auto" src="./assets/image/services/symbol-02.png">
+            <img class="w-28 h-auto" src="{% static "assets/image/services/symbol-02.png" %}">
           </a>
           <a href="#">
-            <img class="w-28 h-auto" src="./assets/image/services/symbol-01.png">
+            <img class="w-28 h-auto" src="{% static "assets/image/services/symbol-01.png" %}">
           </a>
         </div>
       </div>
