@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from datetime import timedelta
 
-
+from .managers import MyUserManager
 
 
 class MyUser(AbstractBaseUser, PermissionsMixin):
@@ -18,7 +18,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = _('my users')
         verbose_name_plural = _('my users')
 
-  
+    objects = MyUserManager()
 
     USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = ['full_name']
