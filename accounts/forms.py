@@ -58,9 +58,6 @@ class UserRegisterForm(forms.Form):
         return cd['password2']
 
 
-
-
-
 class LoginForm(forms.Form):
     phone_number = forms.CharField(
         label=_('phone number'),
@@ -71,9 +68,6 @@ class LoginForm(forms.Form):
         label=_('password'),
         widget=forms.PasswordInput
     )
-
-
-
 
 
 class VerifyCodeForm(forms.Form):
