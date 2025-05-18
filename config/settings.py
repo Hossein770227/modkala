@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # third party apps
     "crispy_forms",
     "crispy_bootstrap4",
+    "rosetta",
 ]
 
 MIDDLEWARE = [

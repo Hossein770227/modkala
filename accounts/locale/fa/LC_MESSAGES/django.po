@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 12:41+0330\n"
+"PO-Revision-Date: 2025-05-18 12:57+0330\n"
+"Last-Translator: Anonymous User <anonymous@user.tld>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.2\n"
+
+#: .\admin.py:49 .\admin.py:50
+msgid "date time"
+msgstr "تاریخ"
+
+#: .\forms.py:41 .\models.py:12 .\templates\accounts\user_register.html:18
+msgid "full name"
+msgstr "نام کامل"
+
+#: .\forms.py:42 .\forms.py:63 .\models.py:11
+#: .\templates\accounts\user_register.html:19
+msgid "phone number"
+msgstr "شماره همراه"
+
+#: .\forms.py:43 .\forms.py:68 .\templates\accounts\login.html:21
+#: .\templates\accounts\user_register.html:20
+msgid "password"
+msgstr "رمز عبور"
+
+#: .\forms.py:44 .\templates\accounts\user_register.html:21
+msgid "confirm password"
+msgstr "تایید رمزعبور"
+
+#: .\forms.py:51
+msgid "This phone number already exists"
+msgstr "ابن شماره تلفن از قبل وجود دارد"
+
+#: .\forms.py:57
+msgid "passwords dont match"
+msgstr "رمز عبور مطابقت ندارد"
+
+#: .\managers.py:7
+msgid "user must have phone number"
+msgstr "وجود شماره همراه الزامیست"
+
+#: .\managers.py:9
+msgid "user must have full name"
+msgstr "وجود نام کامل الزامیست"
+
+#: .\models.py:17 .\models.py:18
+msgid "my users"
+msgstr "مخاطبین"
+
+#: .\models.py:51 .\models.py:52
+msgid "otp code"
+msgstr "کد تایید"
+
+#: .\templates\accounts\login.html:6 .\templates\accounts\login.html:11
+#: .\templates\accounts\login.html:25
+msgid "login"
+msgstr "ورود"
+
+#: .\templates\accounts\login.html:14
+#: .\templates\accounts\user_register.html:13
+msgid "Please enter your information "
+msgstr "لطفا اطلاعات خود را وارد کنید"
+
+#: .\templates\accounts\user_register.html:5
+#: .\templates\accounts\user_register.html:10
+#: .\templates\accounts\user_register.html:24
+#: .\templates\accounts\verify_code.html:5
+msgid "register"
+msgstr "ثبت نام"
+
+#: .\templates\accounts\verify_code.html:10
+msgid "confirm  otp code "
+msgstr "تایید کد ارسالی"
+
+#: .\templates\accounts\verify_code.html:13
+msgid "Please enter your confirm code to register "
+msgstr "لطفا کد تایید را برای ثبت نام وارد کنید"
+
+#: .\templates\accounts\verify_code.html:18
+msgid "confirm code "
+msgstr "تائید کد"
+
+#: .\templates\accounts\verify_code.html:21
+msgid "submit"
+msgstr "ارسال"
+
+#: .\validators.py:11
+msgid "Enter a valid Iranian cellphone number."
+msgstr "لطفا شماره همراه ایران را وارد کنید"
+
+#: .\views.py:31
+msgid "we send your code already"
+msgstr "کد تایید ارسالی رو وارد کنید "
+
+#: .\views.py:41
+msgid "we sent you a code"
+msgstr "کد تائید ارسال شد."
+
+#: .\views.py:56
+msgid "Registration information not found."
+msgstr "اطلاعات کاربری وجود ندرد"
+
+#: .\views.py:62
+msgid "No code was found for this phone number."
+msgstr "کد ای برای این شماره همراه وجود ندارد "
+
+#: .\views.py:74
+msgid "The OTP code has expired."
+msgstr "زمان کد ارسالی به پایان رسیده است."
+
+#: .\views.py:80
+msgid "You have successfully registered."
+msgstr "ثبت نام با موفقیت انجام شد."
+
+#: .\views.py:84
+msgid "This code is incorrect."
+msgstr "کد تایید اشتباه است"
+
+#: .\views.py:99
+msgid "You have successfully logged in."
+msgstr "ورود با موفقیت انجام شد."
+
+#: .\views.py:106
+msgid "phone number or password is incorrect"
+msgstr "شماره همراه یا رمزعبوز اشتباه است "
+
+#: .\views.py:115
+msgid "you successfully logout"
+msgstr "خروج با موفقیت انحام شد"
+
+#: .\views.py:127
+msgid "your password successfully changed"
+msgstr "رمزعبور با موفقیت تغییر دا داده شد."

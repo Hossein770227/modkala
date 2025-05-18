@@ -7,4 +7,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('', include('website.urls')),
     path('mobile/', include('mobile.urls')),
+    path('rosetta/', include('rosetta.urls')),
 ]
