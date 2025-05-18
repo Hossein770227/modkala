@@ -1,19 +1,18 @@
 import pytz
 import random
 
-from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login, logout
+from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 from datetime import datetime, timedelta
 
-from .forms import UserRegisterForm, VerifyCodeForm
+from .forms import LoginForm, UserRegisterForm, VerifyCodeForm
 from utils import send_otp_code
 from .models import OtpCode, MyUser
 
@@ -70,7 +69,6 @@ class UserRegisterCodeView(View):
             now = datetime.now(tz=pytz.timezone('Asia/Tehran'))
             expired_time = code_instance.date_time_created + timedelta(minutes=2) 
             
-
             if now > expired_time:
                 code_instance.delete()
                 messages.error(request, _('The OTP code has expired.'))
@@ -91,18 +89,23 @@ class UserRegisterCodeView(View):
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
+        form = LoginForm(request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            messages.success(request, _('You have successfully logged in.'))
-            next_url = request.GET.get('next')
-            if next_url:
-                return redirect(next_url)
+            phone_number = form.cleaned_data['phone_number']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=phone_number, password=password)
+            if user is not None:
+                login(request, user)
+                messages.success(request, _('You have successfully logged in.'))
+                next_url = request.GET.get('next')
+                if next_url:
+                    return redirect(next_url)
+                else:
+                    return redirect('website:welcome')
             else:
-                return redirect('website:welcome')
+                form.add_error(None, _('phone number or password is incorrect'))
     else:
-        form = AuthenticationForm()
+        form = LoginForm()
     return render(request, 'accounts/login.html', {'form': form})
 
 
@@ -110,10 +113,10 @@ def logout_view(request):
     if request.method =='POST':
         logout(request)
         messages.error(request, _('you successfully logout'))
-        return redirect('products:product_list')
+        return redirect('website:welcome')
 
 
-# password change
+
 @login_required
 def password_change_view(request):
     if request.method =='POST':
