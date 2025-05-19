@@ -4,6 +4,7 @@ charset-normalizer==3.4.2
 crispy-bootstrap4==2024.10
 Django==5.2.1
 django-crispy-forms==2.4
+django-debug-toolbar==5.2.0
 django-rosetta==0.10.2
 idna==3.10
 jalali_core==1.0.0
